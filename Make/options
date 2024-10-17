@@ -1,0 +1,39 @@
+EXE_INC = \
+    -Ifluid \
+    -Isolid \
+    -Iveg \
+    -I_LIB/solarLoadModel/lnInclude \
+    -I_LIB/grassModel/lnInclude \
+    -I_LIB/buildingMaterialModel/lnInclude \
+    -I_LIB/simpleControlFluid/lnInclude \
+    -I_LIB/blendingLayer/lnInclude \
+    -I_LIB/vegetationModels/lnInclude \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/meshTools/lnInclude \
+    -I$(LIB_SRC)/finiteVolume/cfdTools \
+    -I$(LIB_SRC)/ThermophysicalTransportModels/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/basic/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/solidThermo/lnInclude \
+    -I$(LIB_SRC)/radiationModels/lnInclude \
+    -I$(LIB_SRC)/MomentumTransportModels/momentumTransportModels/lnInclude \
+    -I$(LIB_SRC)/MomentumTransportModels/compressible/lnInclude \
+    -I$(LIB_SRC)/regionModels/regionModel/lnInclude \
+    -I$(LIB_SRC)/atmosphericModels/lnInclude
+
+EXE_LIBS = \
+    $(FOAM_USER_LIBBIN)/libsolarLoad.so \
+    $(FOAM_USER_LIBBIN)/libgrassModel.so \
+    $(FOAM_USER_LIBBIN)/libbuildingMaterialModel.so \
+    $(FOAM_USER_LIBBIN)/libsimpleControlFluid.so \
+    $(FOAM_USER_LIBBIN)/libblendingLayer.so \
+    $(FOAM_USER_LIBBIN)/libvegetationModels.so \
+    $(FOAM_USER_LIBBIN)/libporousCompressibleRASModels.so \
+    -lfiniteVolume \
+    -lthermophysicalTransportModels \
+    -lfluidThermophysicalModels \
+    -lsolidThermo \
+    -lmomentumTransportModels \
+    -lfluidThermoMomentumTransportModels \
+    -lradiationModels \
+    -lregionModels \
+    -latmosphericModels
